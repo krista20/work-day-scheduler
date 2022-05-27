@@ -8,6 +8,8 @@ var allTextAreas = $("textarea");
 console.log(allTextAreas)
 
 
+
+
 // var xx = new Date(Date.now());
 // var formatted = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 // };
