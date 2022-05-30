@@ -8,7 +8,10 @@ console.log(currentHour)
 
 var allTextAreas = $("textarea");
 // console.log(allTextAreas);
+var buttonSave = $("button");
 
+
+// displays the color on the rows based on time
 for (i = 0; i < allTextAreas.length; i++) {
     console.log(allTextAreas[i])
     var lineBlockHour = parseInt($(allTextAreas[i]).attr('id'));
@@ -20,48 +23,46 @@ for (i = 0; i < allTextAreas.length; i++) {
     } if (lineBlockHour > currentHour) {
         $(allTextAreas[i]).addClass('future')
     }
-}
+};
 
-// color of teatarea
-// var color = $(this).css("background-color", "color");
+// creating varable get value
 
-// var textAreaTimeLoop = [
-//     $("#eight-am") = moment().hour(8),
-//     $("#nine-am"),
-//     $("#ten-am") = moment().hour(10),
-//     $("#eleven-am") = moment().hour(11),
-//     $("#twelve-pm") = moment().hour(12),
-//     $("#one-pm") = moment().hour(13),
-//     $("#two-pm") = moment().hour(14),
-//     $("#three-pm") = moment().hour(15),
-//     $("#four-pm") ,
-//     $("#five-pm") ,
-// ];
-//     var colorCoding = function() {
-//     for(let i=0; i < 10; i++) {
-//         if(textAreaTimeLoop.length < currentHour) {
-//             return $(".past");
-//             // return($(".past").attr(moment().format("hh")));
-           
-//   } else {
-      
-// console.log('return');
-//     }
-//     }
-//     console.log(textAreaTimeLoop.length < currentHour)
+//clickable save button
+$("button").on("click", function() {
+    // $(this).prev() makes the on click work for multiple clicked buttons, then it gets the value
+    // The prop() method sets or returns properties and values of the selected elements.
+    // the user typed in text to shows in localstorage
+    localStorage.setItem($(this).prop("id"), $(this).prev().val());
+    console.log(localStorage.getItem($(this).prop("id")));
+    // create for loop to 
+    // creating variable to get value from user text input
+   
+    // use localstorage to display what user inputs
+   
+   
 
-//     };
+});
 
 
-// colorCoding();
 
-// $(this).addClass("past");
+// $("button").click(function() {
+//     // for (i = 0; i < allTextAreas.length; i++) {
+//     const value = $(allTextAreas[i])
+//     // const key = $(allTextAreas[i]).val('class');
+//     localStorage.setItem("text", $(".description").attr);
+//     $(allTextAreas).html();
+//     localStorage.getItem("text");
+//     console.log(localStorage)
+    
 
-// var xx = new Date(Date.now());
-// var formatted = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-// };
+//     console.log(value);
+//     // console.log(key);
+//     // }
 
-// give each textarea an ID for its timeblock hour (military time) --
-// for loop and an array for textarea 
-// each textarea try to get idea value
-// compare id to current hour less than, past, prestn, etc
+// console.log($("button"))
+
+
+// });
+    // console.log(localStorage(buttonSave))
+// localStorage.getItem("text");
+
