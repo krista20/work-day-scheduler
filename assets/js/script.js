@@ -7,38 +7,53 @@ var currentHour = moment().hour();
 console.log(currentHour)
 
 var allTextAreas = $("textarea");
-console.log(allTextAreas);
+// console.log(allTextAreas);
+
+for (i = 0; i < allTextAreas.length; i++) {
+    console.log(allTextAreas[i])
+    var lineBlockHour = parseInt($(allTextAreas[i]).attr('id'));
+    if (lineBlockHour < currentHour ) {
+        $(allTextAreas[i]).addClass('past')
+    } 
+    if (lineBlockHour === currentHour) {
+        $(allTextAreas[i]).addClass('present')
+    } if (lineBlockHour > currentHour) {
+        $(allTextAreas[i]).addClass('future')
+    }
+}
 
 // color of teatarea
 // var color = $(this).css("background-color", "color");
 
-var textAreaTimeLoop = [
-    $("#eight-am"),
-    $("#nine-am"),
-    $("#ten-am"),
-    $("#eleven-am"),
-    $("#twelve-pm"),
-    $("#one-pm"),
-    $("#two-pm"),
-    $("#three-pm"),
-    $("#four-pm"),
-    $("#five-pm")
-];
-    var colorCoding = function() {
-    for(let i=0; i < 10; i++) {
-        if(textAreaTimeLoop.length < currentHour) {
-            $(this)
-            // $(".past").css("background-color");
-  } else {
+// var textAreaTimeLoop = [
+//     $("#eight-am") = moment().hour(8),
+//     $("#nine-am"),
+//     $("#ten-am") = moment().hour(10),
+//     $("#eleven-am") = moment().hour(11),
+//     $("#twelve-pm") = moment().hour(12),
+//     $("#one-pm") = moment().hour(13),
+//     $("#two-pm") = moment().hour(14),
+//     $("#three-pm") = moment().hour(15),
+//     $("#four-pm") ,
+//     $("#five-pm") ,
+// ];
+//     var colorCoding = function() {
+//     for(let i=0; i < 10; i++) {
+//         if(textAreaTimeLoop.length < currentHour) {
+//             return $(".past");
+//             // return($(".past").attr(moment().format("hh")));
+           
+//   } else {
+      
+// console.log('return');
+//     }
+//     }
+//     console.log(textAreaTimeLoop.length < currentHour)
 
-    }
-    }
-    console.log(textAreaTimeLoop.length < currentHour.length)
-
-    }
+//     };
 
 
-colorCoding();
+// colorCoding();
 
 // $(this).addClass("past");
 
