@@ -33,7 +33,9 @@ $("button").on("click", function() {
     // The prop() method sets or returns properties and values of the selected elements.
     // the user typed in text to shows in localstorage
     localStorage.setItem($(this).prop("id"), $(this).prev().val());
-    console.log(localStorage.getItem($(this).prop("id")));
+
+    console.log($(this).prop("id"));
+    localStorage.getItem($(this).prop("id"));
     // create for loop to 
     // creating variable to get value from user text input
    
