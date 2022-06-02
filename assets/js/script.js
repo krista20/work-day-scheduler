@@ -33,20 +33,30 @@ $("button").on("click", function() {
     // The prop() method sets or returns properties and values of the selected elements.
     // the user typed in text to shows in localstorage
     localStorage.setItem($(this).prop("id"), $(this).prev().val());
-    console.log($(this).prop("id"));
-    console.log(localStorage.getItem($(this).prop("id")));
+     console.log($(this).prop("id"));
+     console.log(localStorage.getItem($(this).prop("id")));
 
-    for (i = 0; i<localStorage.length; i++) {
-        var key = $(this).prop("id");
-        var value = $(this).prev().val();
-       
-        
+
+});
     
+    // for(i = 0; i<10; i++) {
+    //     var key = $(this).prop("id");
+    //     var value = $(this).prev().val();
        
-         $(key[i]).html() += '${key}: ${value}';
-        console.log($(key[i]).html(value))
-        
-    };
+    //      allTextAreas[i].text += '${key}: ${value}';
+    //     console.log($(key[i]).html(value))
+    // }
+
+  
+            // const stringObj = JSON.stringify(localStorage.getItem($(this)));
+            $(this).val(localStorage.getItem(allTextAreas));
+            console.log(localStorage.getItem(allTextAreas));
+
+
+            // var test = localStorage.getItem("id");
+
+            
+    
     
     // create for loop to list the saved items in localstorage
 
@@ -56,28 +66,21 @@ $("button").on("click", function() {
    
    
 
-});
 
 
 
-// $("button").click(function() {
-//     // for (i = 0; i < allTextAreas.length; i++) {
-//     const value = $(allTextAreas[i])
-//     // const key = $(allTextAreas[i]).val('class');
-//     localStorage.setItem("text", $(".description").attr);
-//     $(allTextAreas).html();
-//     localStorage.getItem("text");
-//     console.log(localStorage)
-    
 
-//     console.log(value);
-//     // console.log(key);
-//     // }
+// getting localstorage
+// when the pg loads, check localstorage to get "textarea"
+// var data = localStorage.getItem(textarea);
+// if textarea in local sotrage, parse data back into an array
+    // JSON.parse(data);
+// for each entry in array, set an textarea as string in that time block
+// for(i = 0; )
+// if text area is not in local storage, define array with 10 empty strings
 
-// console.log($("button"))
-
-
-// });
-    // console.log(localStorage(buttonSave))
-// localStorage.getItem("text");
+// setting localstorage
+// when a save button is clicked then gather inputs from every single time block
+// create in array in order that is gathered
+// with this array, set textarea value and stringify it
 
