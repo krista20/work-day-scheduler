@@ -14,6 +14,6 @@ User Interface:
 ![](/assets/imgs/work-day-scheduler-pic.png)
 
 Link to Application:
-
+https://krista20.github.io/work-day-scheduler/
 
 
